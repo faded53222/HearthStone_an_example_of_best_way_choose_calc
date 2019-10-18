@@ -172,11 +172,11 @@ class Mad_Bomer(minion):
 		for i in targets:
 			i.health-=1
 			for j in targets:
-				if j.health<=0:
+				if j.health<=0 and j is not hero1 and j is not hero2:
 					continue
 				j.health-=1
 				for k in targets:
-					if k.health<=0:
+					if k.health<=0 and k is not hero1 and k is not hero2:
 						continue
 					count_all+=1
 					k.health-=1
